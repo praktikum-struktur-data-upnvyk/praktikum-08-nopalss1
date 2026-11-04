@@ -251,7 +251,7 @@ bool hapus(Node*& root, int nilai) {
         delete root;
         root = temp;
     } else {
-        Node* successor = minimum(root->right);
+        const Node* successor = minimum(root->right);
         root->data = successor->data;
         hapus(root->right, successor->data);
     }
